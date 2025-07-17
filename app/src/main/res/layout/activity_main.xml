@@ -1,42 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/refresh_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
 
-  <com.santalu.emptyview.EmptyView
-      android:id="@+id/empty_view"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      app:ev_empty_button="@string/try_again"
-      app:ev_empty_buttonBackgroundColor="@color/colorPrimary"
-      app:ev_empty_buttonTextColor="@color/white"
-      app:ev_empty_drawable="@drawable/ic_sentiment_dissatisfied"
-      app:ev_empty_drawableTint="@color/colorPrimary"
-      app:ev_empty_title="@string/empty"
-      app:ev_error_backgroundColor="@color/red"
-      app:ev_error_button="@string/try_again"
-      app:ev_error_buttonTextColor="@color/white"
-      app:ev_error_drawable="@drawable/ic_sentiment_very_dissatisfied"
-      app:ev_error_drawableTint="@color/white"
-      app:ev_error_text="@string/error_connection"
-      app:ev_error_textColor="@color/white"
-      app:ev_error_title="@string/error_connection_title"
-      app:ev_error_titleTextColor="@color/white"
-      app:ev_font="@font/allerta"
-      app:ev_loading_type="circular"
-      app:ev_transition="auto">
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+		
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+		    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:lineSpacingMultiplier="1.2"
-        android:padding="16dp"
-        android:text="@string/lorem"/>
+	</com.google.android.material.appbar.AppBarLayout>
+	
+	<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+		
+		
+		android:id="@+id/refresh_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
 
-  </com.santalu.emptyview.EmptyView>
+		<com.github.debacodex.emptyview.EmptyView
+			android:id="@+id/empty_view"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			app:ev_empty_button="@string/try_again"
+			app:ev_empty_buttonBackgroundColor="@color/colorPrimary"
+			app:ev_empty_buttonTextColor="@color/white"
+			app:ev_empty_drawable="@drawable/ic_sentiment_dissatisfied"
+			app:ev_empty_drawableTint="@color/colorPrimary"
+			app:ev_empty_title="@string/empty"
+			app:ev_error_backgroundColor="@color/red"
+			app:ev_error_button="@string/try_again"
+			app:ev_error_buttonTextColor="@color/white"
+			app:ev_error_drawable="@drawable/ic_sentiment_very_dissatisfied"
+			app:ev_error_drawableTint="@color/white"
+			app:ev_error_text="@string/error_connection"
+			app:ev_error_textColor="@color/white"
+			app:ev_error_title="@string/error_connection_title"
+			app:ev_error_titleTextColor="@color/white"
+			app:ev_font="@font/allerta"
+			app:ev_loading_type="circular"
+			app:ev_transition="auto">
 
-</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+			<TextView
+				android:id="@+id/text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:lineSpacingMultiplier="1.2"
+				android:padding="16dp"
+				android:text="@string/lorem"/>
+
+		</com.github.debacodex.emptyview.EmptyView>
+
+	</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+	
+</LinearLayout>
