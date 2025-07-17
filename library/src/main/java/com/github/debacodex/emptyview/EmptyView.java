@@ -19,11 +19,11 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.transition.TransitionManager;
 
-import static com.santalu.emptyview.EmptyViewBuilder.CONTENT;
-import static com.santalu.emptyview.EmptyViewBuilder.EMPTY;
-import static com.santalu.emptyview.EmptyViewBuilder.ERROR;
-import static com.santalu.emptyview.EmptyViewBuilder.LOADING;
-import static com.santalu.emptyview.EmptyViewBuilder.NONE;
+import static com.github.debacodex.emptyview.EmptyViewBuilder.CONTENT;
+import static com.github.debacodex.emptyview.EmptyViewBuilder.EMPTY;
+import static com.github.debacodex.emptyview.EmptyViewBuilder.ERROR;
+import static com.github.debacodex.emptyview.EmptyViewBuilder.LOADING;
+import static com.github.debacodex.emptyview.EmptyViewBuilder.NONE;
 
 
 /**
