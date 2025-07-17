@@ -5,15 +5,12 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.github.debacodex.emptyview"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -22,7 +19,6 @@ android {
     targetCompatibility JavaVersion.VERSION_1_8
   }
 }
-
 dependencies {
 	implementation 'androidx.transition:transition:1.0.0'
 	implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
